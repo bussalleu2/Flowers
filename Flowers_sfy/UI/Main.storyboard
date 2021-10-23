@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BKL-mt-7PF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photos List View Controller-->
+        <scene sceneID="jFl-0d-wTa">
+            <objects>
+                <viewController id="BKL-mt-7PF" customClass="PhotosListViewController" customModule="Flowers_sfy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Adc-Sc-Cdy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lpa-Cr-Sjx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FLv-I1-ls7">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCollectionViewCell" id="Mq3-eH-p86" customClass="ImageCollectionViewCell" customModule="Flowers_sfy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="D5Q-PB-AX0">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gB1-6A-bVx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gB1-6A-bVx" firstAttribute="leading" secondItem="D5Q-PB-AX0" secondAttribute="leading" id="Kt8-3K-55e"/>
+                                                <constraint firstAttribute="trailing" secondItem="gB1-6A-bVx" secondAttribute="trailing" id="yHI-DI-BBb"/>
+                                                <constraint firstAttribute="bottom" secondItem="gB1-6A-bVx" secondAttribute="bottom" id="yJb-iK-KCo"/>
+                                                <constraint firstItem="gB1-6A-bVx" firstAttribute="top" secondItem="D5Q-PB-AX0" secondAttribute="top" id="zRj-t8-6bh"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageView" destination="gB1-6A-bVx" id="aob-bg-TSU"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BKL-mt-7PF" id="Got-OW-Zx2"/>
+                                    <outlet property="delegate" destination="BKL-mt-7PF" id="pJc-d4-gpz"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qrb-Kt-kCm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qrb-Kt-kCm" firstAttribute="bottom" secondItem="Lpa-Cr-Sjx" secondAttribute="bottom" id="3fc-GT-mSl"/>
+                            <constraint firstItem="Qrb-Kt-kCm" firstAttribute="trailing" secondItem="Lpa-Cr-Sjx" secondAttribute="trailing" id="Gnn-53-PMJ"/>
+                            <constraint firstItem="Lpa-Cr-Sjx" firstAttribute="top" secondItem="Qrb-Kt-kCm" secondAttribute="top" id="feL-ID-HBv"/>
+                            <constraint firstItem="Lpa-Cr-Sjx" firstAttribute="leading" secondItem="Qrb-Kt-kCm" secondAttribute="leading" id="tfm-1Y-jCj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colViewFlowers" destination="Lpa-Cr-Sjx" id="WJm-Ka-Lgp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1uY-i6-f7g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-261" y="16"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -9,21 +9,37 @@
 /* Begin PBXBuildFile section */
 		47FC781E2721B0E5000042E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FC781D2721B0E5000042E9 /* AppDelegate.swift */; };
 		47FC78202721B0E5000042E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FC781F2721B0E5000042E9 /* SceneDelegate.swift */; };
-		47FC78222721B0E5000042E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FC78212721B0E5000042E9 /* ViewController.swift */; };
-		47FC78252721B0E5000042E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47FC78232721B0E5000042E9 /* Main.storyboard */; };
 		47FC78272721B0E8000042E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47FC78262721B0E8000042E9 /* Assets.xcassets */; };
 		47FC782A2721B0E8000042E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47FC78282721B0E8000042E9 /* LaunchScreen.storyboard */; };
+		47FC783C2721B1F3000042E9 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FC783B2721B1F3000042E9 /* DataProvider.swift */; };
+		47FC78452723524A000042E9 /* PhotosListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FC78432723524A000042E9 /* PhotosListViewController.swift */; };
+		47FC78462723524A000042E9 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FC78442723524A000042E9 /* ImageCollectionViewCell.swift */; };
+		47FC78482723526D000042E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47FC78472723526D000042E9 /* Main.storyboard */; };
+		47FC784B27235283000042E9 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FC784A27235283000042E9 /* AppConstants.swift */; };
+		47FC784E272352AB000042E9 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FC784D272352AB000042E9 /* Request.swift */; };
+		47FC7854272352CC000042E9 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FC7850272352CC000042E9 /* Photo.swift */; };
+		47FC7855272352CC000042E9 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FC7851272352CC000042E9 /* Collection.swift */; };
+		47FC7856272352CC000042E9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FC7852272352CC000042E9 /* User.swift */; };
+		47FC7857272352CC000042E9 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FC7853272352CC000042E9 /* Errors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		47FC781A2721B0E5000042E9 /* Flowers_sfy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flowers_sfy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47FC781D2721B0E5000042E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47FC781F2721B0E5000042E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		47FC78212721B0E5000042E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		47FC78242721B0E5000042E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47FC78262721B0E8000042E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47FC78292721B0E8000042E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47FC782B2721B0E8000042E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47FC783B2721B1F3000042E9 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		47FC78432723524A000042E9 /* PhotosListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosListViewController.swift; sourceTree = "<group>"; };
+		47FC78442723524A000042E9 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		47FC78472723526D000042E9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		47FC784A27235283000042E9 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		47FC784D272352AB000042E9 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		47FC7850272352CC000042E9 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		47FC7851272352CC000042E9 /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		47FC7852272352CC000042E9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		47FC7853272352CC000042E9 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +72,55 @@
 		47FC781C2721B0E5000042E9 /* Flowers_sfy */ = {
 			isa = PBXGroup;
 			children = (
+				47FC784F272352C4000042E9 /* Model */,
+				47FC784C272352A1000042E9 /* Helper */,
+				47FC784927235277000042E9 /* Utils */,
+				47FC78422723522D000042E9 /* UI */,
 				47FC781D2721B0E5000042E9 /* AppDelegate.swift */,
 				47FC781F2721B0E5000042E9 /* SceneDelegate.swift */,
-				47FC78212721B0E5000042E9 /* ViewController.swift */,
-				47FC78232721B0E5000042E9 /* Main.storyboard */,
+				47FC783B2721B1F3000042E9 /* DataProvider.swift */,
 				47FC78262721B0E8000042E9 /* Assets.xcassets */,
 				47FC78282721B0E8000042E9 /* LaunchScreen.storyboard */,
 				47FC782B2721B0E8000042E9 /* Info.plist */,
 			);
 			path = Flowers_sfy;
+			sourceTree = "<group>";
+		};
+		47FC78422723522D000042E9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				47FC78472723526D000042E9 /* Main.storyboard */,
+				47FC78442723524A000042E9 /* ImageCollectionViewCell.swift */,
+				47FC78432723524A000042E9 /* PhotosListViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		47FC784927235277000042E9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				47FC784A27235283000042E9 /* AppConstants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		47FC784C272352A1000042E9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				47FC784D272352AB000042E9 /* Request.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		47FC784F272352C4000042E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				47FC7851272352CC000042E9 /* Collection.swift */,
+				47FC7853272352CC000042E9 /* Errors.swift */,
+				47FC7850272352CC000042E9 /* Photo.swift */,
+				47FC7852272352CC000042E9 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +182,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				47FC782A2721B0E8000042E9 /* LaunchScreen.storyboard in Resources */,
+				47FC78482723526D000042E9 /* Main.storyboard in Resources */,
 				47FC78272721B0E8000042E9 /* Assets.xcassets in Resources */,
-				47FC78252721B0E5000042E9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +194,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47FC78222721B0E5000042E9 /* ViewController.swift in Sources */,
+				47FC7855272352CC000042E9 /* Collection.swift in Sources */,
+				47FC7854272352CC000042E9 /* Photo.swift in Sources */,
 				47FC781E2721B0E5000042E9 /* AppDelegate.swift in Sources */,
+				47FC784B27235283000042E9 /* AppConstants.swift in Sources */,
+				47FC78462723524A000042E9 /* ImageCollectionViewCell.swift in Sources */,
+				47FC78452723524A000042E9 /* PhotosListViewController.swift in Sources */,
+				47FC784E272352AB000042E9 /* Request.swift in Sources */,
+				47FC7857272352CC000042E9 /* Errors.swift in Sources */,
+				47FC783C2721B1F3000042E9 /* DataProvider.swift in Sources */,
+				47FC7856272352CC000042E9 /* User.swift in Sources */,
 				47FC78202721B0E5000042E9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +211,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		47FC78232721B0E5000042E9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				47FC78242721B0E5000042E9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		47FC78282721B0E8000042E9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,9 +347,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Flowers_sfy/Info.plist;
+				INFOPLIST_KEY_NSMainNibFile = Main;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -318,9 +374,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Flowers_sfy/Info.plist;
+				INFOPLIST_KEY_NSMainNibFile = Main;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
