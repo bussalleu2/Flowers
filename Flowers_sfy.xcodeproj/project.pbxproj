@@ -21,6 +21,7 @@
 		47FC7855272352CC000042E9 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FC7851272352CC000042E9 /* Collection.swift */; };
 		47FC7856272352CC000042E9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FC7852272352CC000042E9 /* User.swift */; };
 		47FC7857272352CC000042E9 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FC7853272352CC000042E9 /* Errors.swift */; };
+		47FC785B2725F11D000042E9 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FC785A2725F11D000042E9 /* PhotoDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		47FC7851272352CC000042E9 /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		47FC7852272352CC000042E9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		47FC7853272352CC000042E9 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		47FC785A2725F11D000042E9 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				47FC78472723526D000042E9 /* Main.storyboard */,
 				47FC78442723524A000042E9 /* ImageCollectionViewCell.swift */,
 				47FC78432723524A000042E9 /* PhotosListViewController.swift */,
+				47FC785A2725F11D000042E9 /* PhotoDetailViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				47FC784B27235283000042E9 /* AppConstants.swift in Sources */,
 				47FC78462723524A000042E9 /* ImageCollectionViewCell.swift in Sources */,
 				47FC78452723524A000042E9 /* PhotosListViewController.swift in Sources */,
+				47FC785B2725F11D000042E9 /* PhotoDetailViewController.swift in Sources */,
 				47FC784E272352AB000042E9 /* Request.swift in Sources */,
 				47FC7857272352CC000042E9 /* Errors.swift in Sources */,
 				47FC783C2721B1F3000042E9 /* DataProvider.swift in Sources */,

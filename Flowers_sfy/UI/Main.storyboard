@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BKL-mt-7PF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oIK-WK-JBD">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Lpa-Cr-Sjx">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FLv-I1-ls7">
                                     <size key="itemSize" width="128" height="128"/>
@@ -66,13 +66,61 @@
                             <constraint firstItem="Lpa-Cr-Sjx" firstAttribute="leading" secondItem="Qrb-Kt-kCm" secondAttribute="leading" id="tfm-1Y-jCj"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="OhK-2b-mI4"/>
                     <connections>
                         <outlet property="colViewFlowers" destination="Lpa-Cr-Sjx" id="WJm-Ka-Lgp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1uY-i6-f7g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-261" y="16"/>
+            <point key="canvasLocation" x="647.82608695652175" y="15.401785714285714"/>
+        </scene>
+        <!--Photo Detail View Controller-->
+        <scene sceneID="da6-4h-lV7">
+            <objects>
+                <viewController storyboardIdentifier="PhotoDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="11J-Rh-1rE" customClass="PhotoDetailViewController" customModule="Flowers_sfy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QiR-Tr-XBk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YQg-pM-SC9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ke5-N4-IXb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YQg-pM-SC9" firstAttribute="top" secondItem="ke5-N4-IXb" secondAttribute="top" id="53w-jT-wLT"/>
+                            <constraint firstItem="ke5-N4-IXb" firstAttribute="trailing" secondItem="YQg-pM-SC9" secondAttribute="trailing" id="EI8-5M-AgE"/>
+                            <constraint firstItem="ke5-N4-IXb" firstAttribute="bottom" secondItem="YQg-pM-SC9" secondAttribute="bottom" id="RM3-HL-wEn"/>
+                            <constraint firstItem="YQg-pM-SC9" firstAttribute="leading" secondItem="ke5-N4-IXb" secondAttribute="leading" id="cPQ-wR-NZj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgDetail" destination="YQg-pM-SC9" id="hVd-8p-mHV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XTq-ae-Ugc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1099" y="-149"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iog-MF-K7q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oIK-WK-JBD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O50-DA-mo1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BKL-mt-7PF" kind="relationship" relationship="rootViewController" id="KM3-Bj-sOM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l3e-tg-ATm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-262.31884057971018" y="15.401785714285714"/>
         </scene>
     </scenes>
     <resources>

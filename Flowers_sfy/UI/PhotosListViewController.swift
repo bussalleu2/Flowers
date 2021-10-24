@@ -21,7 +21,6 @@ open class PhotosListViewController: UIViewController, ImageCollectionViewCellDe
  
     private var isFetching = false
     private var completion:((UIImage, String?) -> Void)?
-    private var imageQuality: FlowersImageQuality = .thumb
     private var photoDownloader : URLSession?
     private var dataSource: [Photo] = []
     private let photoDLQueue:  OperationQueue = {
@@ -84,17 +83,7 @@ open class PhotosListViewController: UIViewController, ImageCollectionViewCellDe
     }
 
 
-
-    open func present(in parent: UIViewController, quality: FlowersImageQuality = .regular,
-                      completion: ((_ image: UIImage, _ url: String?) -> Void)? = nil) {
-        self.completion = completion
-        imageQuality = quality
-        parent.present(self, animated: true, completion: nil)
-    }
-
-    @IBAction func closeTouch(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
+ 
 
     
     
@@ -141,7 +130,7 @@ extension PhotosListViewController : UICollectionViewDataSource, UICollectionVie
     }
 
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let url = dataSource[indexPath.row].getURLForQuality(quality: imageQuality){
+        if let url = dataSource[indexPath.row].getURLForQuality(quality: FlowersImageQuality.regular){
             let request = URLRequest(url: URL(string: url)!, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 10.0)
             photoDownloader?.dataTask(with: request) { (data, response, error) in
                 guard
@@ -152,11 +141,15 @@ extension PhotosListViewController : UICollectionViewDataSource, UICollectionVie
 
                 DispatchQueue.main.async {
                     self.completion?(img, url)
+                    let detailPhotoViewController = self.storyboard?.instantiateViewController(withIdentifier: "PhotoDetailViewController") as! PhotoDetailViewController
+                    
+                    detailPhotoViewController.photoData = img
+                    self.navigationController?.pushViewController(detailPhotoViewController, animated: true)
                     self.dismiss(animated: true, completion: nil)
                 }
             }.resume()
 
-
+            
         }
     }
 
@@ -190,7 +183,7 @@ extension PhotosListViewController : UICollectionViewDataSource, UICollectionVie
         
         cell.startAnimation()
 
-        if let url = photo.getURLForQuality(quality: imageQuality),
+        if let url = photo.getURLForQuality(quality: FlowersImageQuality.thumb),
          
             let realURL = URL(string: url) {
          
