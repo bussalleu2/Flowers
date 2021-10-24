@@ -11,11 +11,8 @@ import UIKit
 private let minSpace: CGFloat = 16
 private let pageSize: Int = 30
 
-open class PhotosListViewController: UIViewController, ImageCollectionViewCellDelegate {
-    func authorSelected(index: Int) {
-        
-    }
-    
+open class PhotosListViewController: UIViewController  {
+
 
     @IBOutlet var colViewFlowers: UICollectionView!
  
@@ -61,6 +58,12 @@ open class PhotosListViewController: UIViewController, ImageCollectionViewCellDe
 
                 self.isFetching = false
                 guard errors == nil else {
+                    DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Error", message: errors?.errors?.joined(separator: "\n"), preferredStyle: .alert)
+                   
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                    self.present(alert, animated: true, completion: nil)
+                    }
                     return
                 }
                 DispatchQueue.main.async {
@@ -177,7 +180,6 @@ extension PhotosListViewController : UICollectionViewDataSource, UICollectionVie
         let photo = dataSource[indexPath.row]
       
         cell.index = indexPath.row
-        cell.delegate = self
         cell.dataTask?.cancel()
         cell.imageView.image = nil
         

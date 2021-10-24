@@ -8,14 +8,11 @@
 import Foundation
 import UIKit
 
-protocol ImageCollectionViewCellDelegate: AnyObject {
-    func authorSelected(index: Int)
-}
+
 
 class ImageCollectionViewCell: UICollectionViewCell {
     static let identifier = "ImageCollectionViewCell"
     var dataTask: URLSessionDataTask?
-    weak var delegate: ImageCollectionViewCellDelegate?
     var index = 0
     private var gradientLayer : CAGradientLayer = {
         $0.colors = [UIColor.lightGray.withAlphaComponent(0.2).cgColor, UIColor.lightGray.withAlphaComponent(0.4).cgColor, UIColor.lightGray.withAlphaComponent(0.2).cgColor]

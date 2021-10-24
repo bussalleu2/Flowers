@@ -14,7 +14,13 @@ public class DataProvider: NSObject {
                        per_page: Int = 10,
                        completion: @escaping ([Photo], Errors?) -> Void) {
         
-        Request.GETRequest(path: "search/photos?query=\(query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "")&page=\(page)&per_page=\(per_page)", params: nil) { (data) in
+        Request.GETRequest(path: "search/photos?query=\(query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "")&page=\(page)&per_page=\(per_page)", params: nil) { (data,error) in
+            if let error = error  {
+                var err = Errors()
+                err.errors = [error.localizedDescription]
+                completion([], err)
+                return
+            }
             guard let data = data else {
                 return
             }
