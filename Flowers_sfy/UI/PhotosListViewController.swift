@@ -21,7 +21,7 @@ open class PhotosListViewController: UIViewController, ImageCollectionViewCellDe
  
     private var isFetching = false
     private var completion:((UIImage, String?) -> Void)?
-    private var imageQuality: FlowersImageQuality = .full
+    private var imageQuality: FlowersImageQuality = .thumb
     private var photoDownloader : URLSession?
     private var dataSource: [Photo] = []
     private let photoDLQueue:  OperationQueue = {
@@ -41,10 +41,6 @@ open class PhotosListViewController: UIViewController, ImageCollectionViewCellDe
 
         colViewFlowers.contentInset = UIEdgeInsets.init(top: 56, left: 0, bottom: 0, right: 0)
        
-        //TODO??
-//        colViewFlowers.register(UINib(nibName: ImageCollectionViewCell.identifier,
-//                                      bundle: Bundle(for: ImageCollectionViewCell.self)),
-//                                forCellWithReuseIdentifier: ImageCollectionViewCell.identifier)
         requestPhotos()
     }
 
@@ -57,9 +53,9 @@ open class PhotosListViewController: UIViewController, ImageCollectionViewCellDe
      private func requestPhotos() {
         let currentPage = Int(dataSource.count / pageSize) + 1
         isFetching = true
-        //TODO: poner el flowers en constante
+       
          
-            DataProvider.searchPhotos(query: "Flowers",
+         DataProvider.searchPhotos(query: Constants.App.IMAGE_SEARCH,
                                   page: currentPage,
                                   per_page: pageSize,
                                   completion: { (photos, errors) in
@@ -109,21 +105,22 @@ open class PhotosListViewController: UIViewController, ImageCollectionViewCellDe
 extension PhotosListViewController : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
  
-
+    
     public func collectionView(_ collectionView: UICollectionView,
                                layout collectionViewLayout: UICollectionViewLayout,
                                sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellSize = (self.view.frame.size.width - (3 * minSpace)) / 2
+    
         return CGSize(width: cellSize, height: cellSize + 30)
     }
-
+   
     public func collectionView(_ collectionView: UICollectionView,
                                layout collectionViewLayout: UICollectionViewLayout,
                                insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets.init(top: 0, left: minSpace, bottom: 0, right: minSpace)
     }
 
-    public func collectionView(_ collectionView: UICollectionView,
+ public func collectionView(_ collectionView: UICollectionView,
                                layout collectionViewLayout: UICollectionViewLayout,
                                minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return minSpace
@@ -173,24 +170,30 @@ extension PhotosListViewController : UICollectionViewDataSource, UICollectionVie
 
     public func collectionView(_ collectionView: UICollectionView,
                                cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+      
         guard
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.identifier, for: indexPath) as? ImageCollectionViewCell,
             indexPath.row < dataSource.count
             else {
                 return UICollectionViewCell()
         }
-    
+        
+        
+       
         let photo = dataSource[indexPath.row]
       
         cell.index = indexPath.row
         cell.delegate = self
         cell.dataTask?.cancel()
         cell.imageView.image = nil
+        
         cell.startAnimation()
 
         if let url = photo.getURLForQuality(quality: imageQuality),
+         
             let realURL = URL(string: url) {
-
+         
             let request = URLRequest(url: realURL, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 10.0)
             cell.dataTask = photoDownloader?.dataTask(with: request) { (data, response, error) in
                 guard

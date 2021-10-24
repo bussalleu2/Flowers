@@ -11,5 +11,9 @@ import UIKit
 struct Constants{
     struct Api{
         static let UNSPLASH_ACCESS_KEY = "OgdRguC7JUdlopNMh1kfeLQ4RR1NgOrLbwUNZwZkBWQ"
+        
+    }
+    struct App{
+        static let IMAGE_SEARCH = "Flowers"
     }
 }

@@ -28,7 +28,6 @@ class ImageCollectionViewCell: UICollectionViewCell {
 
 
 
-//TODO: hay que poner esto?
     override func awakeFromNib() {
         super.awakeFromNib()
         let animationStart : CABasicAnimation = {
